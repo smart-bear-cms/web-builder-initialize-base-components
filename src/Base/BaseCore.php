@@ -14,14 +14,6 @@ use nguyenanhung\Platforms\WebBuilderSDK\Initialize\BaseComponents\Template\Temp
  */
 class BaseCore extends InitializeBaseCore
 {
-    const VERSION = '1.0.0';
-    const KEY_DATABASE = 'DATABASE';
-    const KEY_OPTIONS = 'OPTIONS';
-    const KEY_AUTH = 'AUTH';
-    const KEY_CONFIG = 'CONFIG';
-    const KEY_API_SERVICE = 'API_SERVICE';
-    const KEY_HANDLE = 'HANDLE';
-
     /**
      * BaseCore constructor.
      *

@@ -2,8 +2,7 @@
 
 namespace nguyenanhung\Platforms\WebBuilderSDK\Initialize\BaseComponents\Database;
 
-use nguyenanhung\MyDatabase\Model\BaseModel;
-use nguyenanhung\Platforms\WebBuilderSDK\Initialize\BaseComponents\Base\BaseCore;
+use nguyenanhung\Platforms\WebBuilderSDK\InitializeCoreServices\Database\Database as InitializeDatabase;
 
 /**
  * Class Database
@@ -12,12 +11,8 @@ use nguyenanhung\Platforms\WebBuilderSDK\Initialize\BaseComponents\Base\BaseCore
  * @author    713uk13m <dev@nguyenanhung.com>
  * @copyright 713uk13m <dev@nguyenanhung.com>
  */
-class Database extends BaseCore
+class Database extends InitializeDatabase
 {
-
-    /** @var array $database */
-    protected $database;
-
     /**
      * Database constructor.
      *
@@ -30,83 +25,5 @@ class Database extends BaseCore
     {
         parent::__construct($options);
         $this->logger->setLoggerSubPath(__CLASS__);
-    }
-
-    /**
-     * Function setDatabase
-     *
-     * @param $database
-     *
-     * @return $this
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
-     * @time     : 27/02/2023 26:10
-     */
-    public function setDatabase($database)
-    {
-        $this->database = $database;
-
-        return $this;
-    }
-
-    /**
-     * Function connection
-     *
-     * @return \nguyenanhung\MyDatabase\Model\BaseModel
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
-     * @time     : 27/02/2023 26:12
-     */
-    public function connection()
-    {
-        $DB = new BaseModel();
-        $DB->debugStatus = $this->options['debugStatus'];
-        $DB->debugLevel = $this->options['debugLevel'];
-        $DB->debugLoggerPath = $this->options['loggerPath'];
-        $DB->debugLoggerFilename = 'Log-' . date('Y-m-d') . '.log';
-        $DB->setDatabase($this->database);
-        $DB->__construct($this->database);
-
-        return $DB;
-    }
-
-    /**
-     * Function checkExitsRecord
-     *
-     * @param $wheres
-     * @param $tableName
-     *
-     * @return bool
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
-     * @time     : 07/08/2022 17:45
-     */
-    public function checkExitsRecord($wheres, $tableName)
-    {
-        $DB = $this->connection();
-        $DB->setTable($tableName);
-        $result = $DB->checkExists($wheres);
-        $DB->disconnect();
-        unset($DB);
-
-        return $result === 1;
-    }
-
-    /**
-     * Function initDBTable
-     *
-     * @param $table
-     *
-     * @return \nguyenanhung\MyDatabase\Model\BaseModel
-     * @author   : 713uk13m <dev@nguyenanhung.com>
-     * @copyright: 713uk13m <dev@nguyenanhung.com>
-     * @time     : 09/01/2023 12:31
-     */
-    protected function initDBTable($table)
-    {
-        $DB = $this->connection();
-        $DB->setTable($table);
-
-        return $DB;
     }
 }
