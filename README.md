@@ -1,4 +1,9 @@
-[![Latest Stable Version](http://poser.pugx.org/web-builder-sdk/initialize-base-components/v)](https://packagist.org/packages/web-builder-sdk/initialize-base-components) [![Total Downloads](http://poser.pugx.org/web-builder-sdk/initialize-base-components/downloads)](https://packagist.org/packages/web-builder-sdk/initialize-base-components) [![Latest Unstable Version](http://poser.pugx.org/web-builder-sdk/initialize-base-components/v/unstable)](https://packagist.org/packages/web-builder-sdk/initialize-base-components) [![License](http://poser.pugx.org/web-builder-sdk/initialize-base-components/license)](https://packagist.org/packages/web-builder-sdk/initialize-base-components) [![PHP Version Require](http://poser.pugx.org/web-builder-sdk/initialize-base-components/require/php)](https://packagist.org/packages/web-builder-sdk/initialize-base-components)
+[![Latest Stable Version](https://img.shields.io/packagist/v/web-builder-sdk/initialize-base-components.svg?style=flat-square)](https://packagist.org/packages/web-builder-sdk/initialize-base-components)
+[![Total Downloads](https://img.shields.io/packagist/dt/web-builder-sdk/initialize-base-components.svg?style=flat-square)](https://packagist.org/packages/web-builder-sdk/initialize-base-components)
+[![Daily Downloads](https://img.shields.io/packagist/dd/web-builder-sdk/initialize-base-components.svg?style=flat-square)](https://packagist.org/packages/web-builder-sdk/initialize-base-components)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/web-builder-sdk/initialize-base-components.svg?style=flat-square)](https://packagist.org/packages/web-builder-sdk/initialize-base-components)
+[![License](https://img.shields.io/packagist/l/web-builder-sdk/initialize-base-components.svg?style=flat-square)](https://packagist.org/packages/web-builder-sdk/initialize-base-components)
+[![PHP Version Require](https://img.shields.io/packagist/dependency-v/web-builder-sdk/initialize-base-components/php)](https://packagist.org/packages/web-builder-sdk/initialize-base-components)
 
 # Web Builder SDK Module - Base Components
 
